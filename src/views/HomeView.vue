@@ -1,9 +1,10 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import CommentList from '../components/CommentList.vue';
+import data from '@/data.json';
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <CommentList :comments="data.comments" />
   </main>
 </template>
