@@ -6,6 +6,7 @@ defineProps({
         default: false
     }
 })
+
 </script>
 <template>
     <div class="actions">

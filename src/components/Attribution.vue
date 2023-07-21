@@ -1,7 +1,7 @@
 <template>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Heikki Miinalainen</a>.
+      Coded by <a href="https://github.com/Hegezcc">Heikki Miinalainen</a>.
     </div>
   </template>
   <style scoped>

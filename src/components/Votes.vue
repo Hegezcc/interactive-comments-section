@@ -1,15 +1,18 @@
 <script setup>
-defineProps({
+const props = defineProps({
     score: {
         type: Number,
         required: true,
     }
-})
+});
+
+defineEmits(['change']);
+
 </script>
 <template>
     <div class="votes">
-        <button>+</button>
+        <button @click="$emit('change', 1)">+</button>
         <span>{{ score }}</span>
-        <button>-</button>
+        <button @click="$emit('change', -1)">-</button>
     </div>
 </template>

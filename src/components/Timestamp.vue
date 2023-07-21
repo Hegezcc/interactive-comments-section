@@ -1,7 +1,9 @@
 <script setup>
+import moment from 'moment';
+
 defineProps({
     time: {
-        type: String,
+        type: Number,
         required: true,
     }
 })
@@ -9,6 +11,6 @@ defineProps({
 
 <template>
     <div class="timestamp">
-        {{ new Date(time).toLocaleString() }}
+        {{ moment(time).fromNow() }}
     </div>
 </template>

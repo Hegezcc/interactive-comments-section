@@ -1,6 +1,6 @@
 <script setup>
 // Profile picture is a map with possible sources for it, eg. webp, png
-defineProps({
+const props = defineProps({
     picture: {
         type: Object,
         required: true
@@ -10,14 +10,28 @@ defineProps({
         required: true
     }
 })
+
+const images = [];
+for (const [key, value] of Object.entries(props.picture)) {
+    images.push({
+        src: `/${value}`,
+        type: `image/${key}`,
+    });
+}
+
+// Get the first png
+const defaultImage = images.find(image => image.type === 'image/png');
 </script>
 
 <template>
     <div class="profile-picture">
         <picture>
-            <source :srcset="picture.webp" type="image/webp">
-            <source :srcset="picture.png" type="image/png">
-            <img :src="picture.png" :alt="name">
+            <source v-for="picture of images" 
+                :key="picture.type" 
+                :srcset="picture.src" 
+                :type="picture.type"
+            >
+            <img :src="defaultImage.src" :alt="name">
         </picture>
     </div>
 </template>
@@ -28,8 +42,9 @@ defineProps({
     width: 2rem;
     border-radius: 2rem;
 }
-picture {
+picture, img {
     display: block;
     width: 100%;
+    height: auto;
 }
 </style>
