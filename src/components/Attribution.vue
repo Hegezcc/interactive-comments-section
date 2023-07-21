@@ -11,6 +11,7 @@
     background-color: hsl(192, 66%, 27%);
     color: hsl(0, 0%, 100%);
     padding: 1em;
+    margin-top: auto;
   }
   
   .attribution a {

@@ -27,3 +27,12 @@ const data = reactive(initialData);
     <CommentList :comments="data.comments" :current-user="data.currentUser" />
   </main>
 </template>
+
+<style scoped lang="scss">
+@import '@/assets/base.scss';
+
+main {
+  max-width: $desktop-max;
+  margin: 0 auto;
+}
+</style>

@@ -2,8 +2,13 @@
 
 body {
   margin: 0;
+  background: $light-gray;
 }
 
 #app {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  max-width: $desktop-max;
+  min-height: 100vh;
 }

@@ -7,6 +7,3 @@ import Attribution from './components/Attribution.vue';
   <RouterView />
   <Attribution />
 </template>
-
-<style scoped>
-</style>
